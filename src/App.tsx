@@ -3,14 +3,14 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createStaticNavigation } from '@react-navigation/native';
 import { StaticParamList } from '@react-navigation/core';
-import ProfileScreen from './screens/ProfileScreen.tsx';
 import HomeScreen from './screens/HomeScreen.tsx';
 import useColors from './hooks/useColors.ts';
+import WeatherSearchScreen from './screens/WeatherSearchScreen.tsx';
 
 const RootStack = createNativeStackNavigator({
   screens: {
     Home: HomeScreen,
-    Profile: ProfileScreen,
+    Profile: WeatherSearchScreen,
   },
 });
 
@@ -35,14 +35,12 @@ const Navigation = createStaticNavigation(RootStack);
 function App() {
   const colors = useColors();
 
+  const styles = { flex: 1, backgroundColor: colors.background };
+
   return (
     <SafeAreaProvider>
-      <View
-        style={{
-          backgroundColor: colors.background,
-        }}
-      >
-        <StatusBar barStyle={'light-content'} />
+      <StatusBar barStyle={'dark-content'} />
+      <View style={styles}>
         <Navigation />
       </View>
     </SafeAreaProvider>
