@@ -7,8 +7,8 @@ const HomeScreen = () => {
   return (
     <View>
       <UIButton
-        title={'Go to profile'}
-        onPress={() => nav.navigate('Profile')}
+        title={'Go to Weather Search'}
+        onPress={() => nav.navigate('WeatherSearch')}
       />
     </View>
   );

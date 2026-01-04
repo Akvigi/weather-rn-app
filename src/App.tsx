@@ -10,7 +10,7 @@ import WeatherSearchScreen from './screens/WeatherSearchScreen.tsx';
 const RootStack = createNativeStackNavigator({
   screens: {
     Home: HomeScreen,
-    Profile: WeatherSearchScreen,
+    WeatherSearch: WeatherSearchScreen,
   },
 });
 
